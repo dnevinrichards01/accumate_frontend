@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+ 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: black;
+    font-size: 1.4em;
+}
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 1em;
+    }
+}
+
+    
+ul li {
+    padding: 0;
+    margin: 0 0 0 30px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+p {
+    max-width: 60ch;
+}
+
+.menu-bar {
+    height: 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    gap: 15px
+}
+
+    .menu-item {
+        height: 100%;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .menu-item img {
+        height: 60px;
+        width: auto;
+    }
+
+    .menu-logo {
+        flex-shrink: 0;
+    }
+
+    
+    .menu-title {
+        flex-shrink: 1;
+        margin-top: 5px;
+    }
+    @media only screen and (max-width: 935px) { .menu-title { display: none } }
+
+    .menu-waitlist-button {
+        margin-bottom: 20px;
+        flex-shrink: 0;
+        width: 15ch;
+    }
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+/* 350px; */
+.container{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 70%;
+    height: 50vh;
+    min-height: 300px;
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+
+    .container h1 {
+        color: rgb(139, 74, 139);
+    }
+
+    .container h2 {
+        font-size: 1em;
+    }
+
+    .container > div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .vertical{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .horizontal{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .contact-us {
+        width: 90%;
+        height: 50px;
+        min-height: 50px;
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+
+    .rechart {
+        height: 85vh;
+        min-height: 500px;
+        max-height: 1200px;
+        width: 85vh;
+        min-width: 500px;
+        max-width: 1200px;
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+
+    .how-it-works {
+        gap: 40px;
+        width: 80%;
+        justify-content: space-around;
+        margin-bottom: 70px;
+    }
+
+    .how-we-get {
+        height: 150px;
+        min-height: 150px;
+        margin-bottom: 70px;
+    }
+
+    .join-waitlist-container {
+        min-height: 350px;
+    }
+
+
+
+.join-waitlist {
+    width:400px;
+    padding: 0 100px;
+}
+
+.form-button {
+    width: 95%;
+    height: auto;
+    background-color: rgb(139, 74, 139);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .form-button:hover {
+    background-color: rgb(110, 58, 110);
+  }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 10%;
+}
+
+    .column-item {
+        width:100%;
+    }
+
+        .indent {
+            margin-left: 30px;
+        }
+
+
+.tooltiptext {
+   color: white;
+}
+
+/*background-color: rgb(1, 1, 1, .1);*/
+.custom-tooltip {
+    background-image: radial-gradient(black 0%, transparent 100%);
+}
+
