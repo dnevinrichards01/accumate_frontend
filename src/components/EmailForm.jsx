@@ -44,6 +44,7 @@ function EmailForm({route}) {
             setError("")
             setSuccess("Congratulations! You're on the waitlist!");
         } catch (error) {
+            console.log(error)
             if (error.response && error.response.hasOwnProperty('data')) {
                 parseErrorMessage(error.response['data'])
             } else {
