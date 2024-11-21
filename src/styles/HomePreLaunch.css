@@ -10,6 +10,7 @@
 }
 
 
+
 body{
     background-color: black;
 }
@@ -63,6 +64,13 @@ html {
     }
 }
 
+@media screen and (max-width: 450px) { 
+    /* anything this small can't scroll to the sides, 
+    content outside of the viewport is hidden*/
+    html, body {
+        overflow-x: hidden;
+    }
+}
 
 
 .page-container {
