@@ -66,21 +66,21 @@ function HomePreLaunch() {
                 <div className='content-row vertical'>
                     <h1>How it works</h1>
                     <div className='horizontal three-cols'>
-                        <div className='col vertical'>
+                        <div className='vertical'>
                             <img src={digitalWallet} 
                             style={{'height':'12rem', 'width':'auto'}}/>
                             <p style={{'padding':'0 0 0 0','height':'2rem'}}>
                                 User transacts with Virtual Card
                             </p>
                         </div>
-                        <div className='col vertical'>
+                        <div className='vertical'>
                             <img src={cardRouting}
                             style={{'height':'12rem', 'width':'auto'}}/>
                             <p style={{'margin':'0 0 0 0', 'height':'2rem'}}>
                                 Transaction is routed to the most rewarding card
                             </p>
                         </div>
-                        <div className='col vertical'>
+                        <div className='vertical'>
                             <img src={brokerageRobinhood}
                             style={{'height':'12rem', 'width':'auto'}}/>
                             <p style={{'margin':'0 0 0 0','height':'2rem'}}>

@@ -321,17 +321,21 @@ p {
     display: flex;
     justify-content: space-around;
     height: 15rem;
-    padding-left: 3rem;
+    padding: 0 3rem;
     flex-wrap: wrap;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
     .three-cols { /* turns these columns into rows */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
 }
-     
+
+    .three-cols .vertical {
+        gap: 0;
+    }
+
 
 
 .form-button {
