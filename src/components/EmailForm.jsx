@@ -72,7 +72,7 @@ function EmailForm({route}) {
                 (error && <div className='form-input-error'>{error}</div>) ||
                 (success && <div>{success}</div>)
             : <br/>}
-            <button className="form-button" type="submit" >
+           <button className="form-button" type="submit" >
                 Join Waitlist
             </button>
         </form>

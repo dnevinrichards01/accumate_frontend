@@ -9,19 +9,56 @@
 	padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 
 body{
     background-color: black;
-    font-size: 1.4em;
 }
-@media only screen and (max-width: 800px) {
-    body {
-        font-size: 1em;
+
+html {
+    scroll-behavior: smooth;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (min-width: 1800) { 
+    html { 
+        font-size: 1.8rem;
     }
+}
+@media only screen and (max-width: 1800) { 
+    html { 
+        font-size: 1.6rem; 
+    }
+}
+@media only screen and (max-width: 1500px) { 
+    html { 
+        font-size: 1.3rem; 
+    }
+}
+
+@media only screen and (max-width: 1100px) { 
+    html { 
+        font-size: 1.2rem; 
+    }
+}
+
+@media only screen and (max-width: 950px) { 
+    html { 
+        font-size: 1.1rem; 
+    }
+}
+@media only screen and (max-width: 500px) { 
+    html { 
+        font-size: 1rem; 
+    }
+}
+
+
+
+
+.page-container {
+    max-width: 1500px;
+    padding: 0 1rem;
 }
 
     
@@ -40,26 +77,47 @@ p {
 }
 
 .menu-bar {
-    height: 70px;
+    height: auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 1rem 1rem 0 1rem;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    gap: 15px
+    gap: 1.5rem;
+    font-size: 1rem;
+}
+@media only screen and (max-width: 1000px) { 
+    .menu-bar { 
+        flex-wrap: wrap;
+        
+    }
+}
+@media only screen and (max-width: 1000px) { 
+    .menu-bar { 
+        justify-content: center;
+        padding: 1rem .5rem 0 .5rem;
+        gap: 2rem;
+    }
 }
 
     .menu-item {
         height: 100%;
         width: auto;
         flex-shrink: 0;
+        font-size: 1rem;
+        margin: 0 1rem;
+        justify-content: center;
+    }
+    @media only screen and (max-width: 1000px) { 
+        .menu-item { 
+            margin: 0 0;
+        }
     }
 
     .menu-item img {
-        height: 60px;
+        height: 3rem;
         width: auto;
     }
 
@@ -69,15 +127,37 @@ p {
 
     
     .menu-title {
-        flex-shrink: 1;
-        margin-top: 5px;
-    }
-    @media only screen and (max-width: 935px) { .menu-title { display: none } }
-
-    .menu-waitlist-button {
-        margin-bottom: 20px;
         flex-shrink: 0;
-        width: 15ch;
+        margin-bottom: .4rem;
+    }
+    @media only screen and (max-width: 1000px) { 
+        .menu-title { 
+            display: none;
+        }
+    }
+    
+
+    .menu-waitlist-div {
+        flex-shrink: 0;
+        height: 2.5rem;
+        width: 17ch;
+        margin-bottom: .5rem;
+        margin-top: 0;
+    }
+
+    .menu-button {
+        height: 100%;
+        width: 12ch;
+        font-size: 1rem;
+        background-color: rgb(139, 74, 139);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .menu-button:hover {
+        background-color: rgb(110, 58, 110);
     }
 
 
@@ -85,32 +165,48 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
+    h1 {
+        text-align: left;
+    }
+
+.menu-title-shifted {
+    display: none;
+    margin-bottom: 0;
+    padding: 0 1rem;
+    width: 100%;
+    color: white;
+    align-self: center;
+}
+@media only screen and (max-width: 1000px) { 
+    .menu-title-shifted { 
+        display: flex;
+        justify-content: center;
+    }
+}
 /* 350px; */
-.container{
+.content-row{
     background-color: black;
     color: white;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    width: 70%;
-    height: 50vh;
-    min-height: 300px;
-    max-height: 400px;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
+    width: 100%;
 }
 
-    .container h1 {
-        color: rgb(139, 74, 139);
+    .content-row h1 {
+        color:rgb(139, 74, 139);
+        width: 100%;
+        align-self: left;
     }
 
-    .container h2 {
+    .content-row h2 {
         font-size: 1em;
     }
 
-    .container > div {
+    .content-row > div {
         height: 100%;
         width: 100%;
     }
@@ -118,7 +214,8 @@ p {
     .vertical{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
         gap: 30px;
     }
 
@@ -126,13 +223,13 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        gap: 30px;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 
     .contact-us {
         width: 90%;
-        height: 50px;
-        min-height: 50px;
+        height: 5rem;
         color: grey;
         display: flex;
         flex-direction: column;
@@ -145,7 +242,7 @@ p {
         min-height: 500px;
         max-height: 1200px;
         width: 85vh;
-        min-width: 500px;
+        min-width: 400px;
         max-width: 1200px;
         font-size: 1rem;
         padding: 20px 0;
@@ -158,22 +255,68 @@ p {
         margin-bottom: 70px;
     }
 
+
     .how-we-get {
         height: 150px;
         min-height: 150px;
         margin-bottom: 70px;
     }
+        .how-we-get p {
+            margin-left: 3.1em;
+        }
+
+
 
     .join-waitlist-container {
-        min-height: 350px;
     }
 
 
 
-.join-waitlist {
-    width:400px;
-    padding: 0 100px;
+.two-cols {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    padding-left: 1rem;
+    height: 15rem;
+    flex-wrap: wrap;
 }
+
+    .two-cols .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin: 0 .2rem;
+        gap: .05rem .2rem;
+        width: 14rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+
+        .two-cols .column-item {
+            width:100%;
+        }
+
+            .two-cols .indent {
+                margin-left: 1.7rem;
+            }
+
+.three-cols {
+    display: flex;
+    justify-content: space-around;
+    height: 15rem;
+    padding-left: 3rem;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 1200px) {
+    .three-cols { /* turns these columns into rows */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+     
+
 
 .form-button {
     width: 95%;
@@ -191,20 +334,7 @@ p {
     background-color: rgb(110, 58, 110);
   }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 10%;
-}
 
-    .column-item {
-        width:100%;
-    }
-
-        .indent {
-            margin-left: 30px;
-        }
 
 
 .tooltiptext {
@@ -214,5 +344,8 @@ p {
 /*background-color: rgb(1, 1, 1, .1);*/
 .custom-tooltip {
     background-image: radial-gradient(black 0%, transparent 100%);
+    position: 'absolute';
+    top: 0;
+    left: 0;
 }
 

@@ -17,9 +17,8 @@ import "../styles/HomePreLaunch.css"
 
 
 
-
 const ReChartViz = () => {
-    const [monthlySpend, setMonthlySpend] = useState(2500);
+    const [monthlySpend, setMonthlySpend] = useState(4000);
     const [hoverYear, setHoverYear] = useState(null);
 
     const dateNow = new Date();
@@ -76,7 +75,7 @@ const ReChartViz = () => {
         if (active && payload && payload.length) {
             const year = payload[0]?.payload?.year;
             return (
-                <div className="custom-tooltip">
+                <div className="custom-tooltip" styles={{'pointerEvents': 'none'}}>
                     <p style={{'color': 'white'}}>Year: {year}</p>
                     {payload.map((entry, index) => (
                         <p key={index} style={{ color: entry.color }}>
@@ -99,21 +98,21 @@ const ReChartViz = () => {
                 onMouseLeave={handleMouseLeave}
                 >
                     <CartesianGrid vertical={false} horizontal={false} />
-                    <XAxis dataKey="year" domain={[dateNow.getFullYear(),dateNow.getFullYear()+42]} padding={{ left: 5, right: 0 }}
-                    tick={{ fontSize: '16px'}}
+                    <XAxis dataKey="year" domain={[dateNow.getFullYear(),dateNow.getFullYear()+42]} 
+                    padding={{ left: 5, right: 0 }}
+                    tick={{ fontSize: '.7rem'}}
                     allowDataOverflow
                     ticks={Array.from({length: 11}, (_, i) => 4*i + dateNow.getFullYear())} 
-                    tickCount={10}
                     >
                     </XAxis>
                     <YAxis tickFormatter={(usd) => `$${Math.floor(usd / 1000)}K`} domain={[0,120000]} 
-                        ticks={[0, 300000, 600000, 900000, 1200000, 1500000]} 
-                        tickCount={5}
-                        tick={{ fontSize: '16px'}}
-                        padding={{ top: 0, bottom: 5 }} allowDataOverflow={false} 
+                        ticks={[0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000]} 
+                        tick={{ fontSize: '.7rem', }}
+                        padding={{ top: 5, bottom: 5 }} 
+                        allowDataOverflow={false}
                         allowDecimals={false}>
                     </YAxis>
-                    <Tooltip content={<CustomTooltip/>}/>
+                    <Tooltip content={<CustomTooltip/>} position={{ x: 75, y: 10 }}/>
                     
                     <Line type="monotone" dataKey="exponential" name="With Accumate" stroke="rgb(139, 74, 139)"
                     dot={false} strokeWidth={3}/>
@@ -130,7 +129,7 @@ const ReChartViz = () => {
                 <Slider 
                     props={{
                         min:0, 
-                        max:4000, 
+                        max:8000, 
                         step:1, 
                         initialValue:monthlySpend,
                         sliderHandleChange:handleChange

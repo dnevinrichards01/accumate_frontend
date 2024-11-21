@@ -13,35 +13,38 @@ import brokerageRobinhood from "../assets/brokerage-robinhood.png"
 function HomePreLaunch() {
 
     return (
-        <div>
+        <div className='page-container'>
             <header>
                 <div className='menu-bar'>
                     <div className='menu-item menu-logo'>
-                        <img src={logo}></img>
+                        <img src={logo} className='menu-logo'></img>
                     </div>
                     <div className='menu-item menu-title'>
                         <h1>See What You Can Make</h1>
                     </div>
-                    <div className='menu-item menu-waitlist-button'>
+                    <div className='menu-item menu-waitlist-div'>
                         <a href="#waitlist">
-                            <button className='form-button'>Join Waitlist</button>
+                            <button className='menu-button'>Join Waitlist</button>
                         </a>
                     </div>
                 </div>
             </header>
+            <div className='menu-title-shifted'>
+                <h1>See What You Can Make</h1>
+            </div>
             <div className='content'>
-                <div className='container vertical rechart'>
+                <div className='content-row rechart'>
                     <ReChartViz />
                 </div>
-                <div className='container vertical join-waitlist-container' id='waitlist'>
+                <div className='content-row vertical join-waitlist-container' id='waitlist'>
                     <h1>Join Accumate's Waitlist</h1>
-                    <div className='join-waitlist'>
+                    <div className=''>
                         <EmailForm route='api/waitlist/' style={{'margin': '10px'}}/>
                     </div>
                 </div>
-                <div className='container vertical'>
+                <div className='content-row vertical '>
                     <h1>Accumate</h1>
-                    <div className='container horizontal'>
+                    <div className='horizontal two-cols'>
                         <div className='column'>
                             <h2>You</h2>
                             <div className='column column-item indent'>
@@ -54,30 +57,30 @@ function HomePreLaunch() {
                             <h2>While we automatically</h2>
                             <div className='column column-item indent'>
                                 <p>Maximize your cashback</p>
-                                <p>Invest it into EFTs</p>
+                                <p>Invest it into ETFs</p>
                                 <p>74x return on your cashback by retirement</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='container vertical'>
+                <div className='content-row vertical'>
                     <h1>How it works</h1>
-                    <div className='container horizontal how-it-works'>
-                        <div>
+                    <div className='horizontal three-cols'>
+                        <div className='col vertical'>
                             <img src={digitalWallet} 
                             style={{'height':'170px', 'width':'auto'}}/>
                             <p style={{'padding':'0 0 0 10px','height':'4em'}}>
                                 User transacts with Virtual Card
                             </p>
                         </div>
-                        <div>
+                        <div className='col vertical'>
                             <img src={cardRouting}
                             style={{'height':'170px', 'width':'auto'}}/>
                             <p style={{'margin':'0 0 0 10px', 'height':'4em'}}>
                                 Transaction is routed to the most rewarding card
                             </p>
                         </div>
-                        <div>
+                        <div className='col vertical'>
                             <img src={brokerageRobinhood}
                             style={{'height':'170px', 'width':'auto'}}/>
                             <p style={{'margin':'0 0 0 15px','height':'4em'}}>
@@ -87,7 +90,7 @@ function HomePreLaunch() {
                     </div>
                     
                 </div>
-                <div className='container vertical how-we-get'>
+                <div className='content-row vertical how-we-get'>
                     <h1>How we get you 4.6% cashback</h1>
                     <div>
                         <p>
@@ -97,7 +100,7 @@ function HomePreLaunch() {
                         </p>
                     </div>
                 </div>
-                <div className='container contact-us'>
+                <div className='content-row contact-us'>
                     <h2>Contact us</h2>
                     <p>admin@accumatewealth.com</p>
                 </div>
