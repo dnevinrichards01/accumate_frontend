@@ -91,14 +91,14 @@ const ReChartViz = () => {
     return (
         <div className='rechart-graph'>
             <ResponsiveContainer width="100%" height="75%">
-                <LineChart data={data} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
+                <LineChart data={data} margin={{ top: 0, right: 30, left: 5, bottom: 0 }}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 >
                     <CartesianGrid vertical={false} horizontal={false} />
                     <XAxis dataKey="year" domain={[dateNow.getFullYear(),dateNow.getFullYear()+42]} 
                     padding={{ left: 5, right: 0 }}
-                    tick={{ fontSize: '.7em'}}
+                    tick={{ fontSize: '.8em'}}
                     minTickGap={1.5}
                     allowDataOverflow
                     ticks={Array.from({length: 6}, (_, i) => 8*i + dateNow.getFullYear())} 
@@ -106,7 +106,7 @@ const ReChartViz = () => {
                     </XAxis>
                     <YAxis tickFormatter={(usd) => `$${Math.floor(usd / 1000)}K`} domain={[0,120000]} 
                         ticks={[0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000]} 
-                        tick={{ fontSize: '.7em'}}
+                        tick={{ fontSize: '.8em'}}
                         padding={{ top: 5, bottom: 5 }} 
                         allowDataOverflow={false}
                         allowDecimals={false}>

@@ -74,8 +74,10 @@ function HomePreLaunch() {
                             </p>
                         </div>
                         <div className='vertical'>
-                            <img src={cardRouting}
-                            style={{'height':'12rem', 'width':'auto'}}/>
+                            <div>
+                                <img src={cardRouting}
+                                style={{'height':'12rem', 'width':'auto'}}/>
+                            </div>
                             <p style={{'margin':'0 0 0 0', 'height':'2rem'}}>
                                 Transaction is routed to the most rewarding card
                             </p>
