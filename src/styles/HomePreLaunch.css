@@ -308,6 +308,11 @@ p {
                 font-size: .5rem;
             }
         }
+        @media only screen and (max-width: 500px) and (min-height: 500px) { 
+            .rechart-slider {
+                font-size: .9rem;
+            }
+        }
 
     .how-it-works {
         gap: 40px;
@@ -430,7 +435,7 @@ p {
     top: 0;
     left: 0;
 }
-@media only screen and (max-width: 700px) { 
+@media only screen and (max-width: 700px) {
     .custom-tooltip {
         font-size: .8rem;
     }
@@ -440,8 +445,4 @@ p {
         font-size: .6rem;
     }
 }
-@media only screen and (max-width: 500px) and (min-height: 500px) { 
-    .custom-tooltip {
-        font-size: .9rem;
-    }
-}
+
