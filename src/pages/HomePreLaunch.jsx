@@ -67,27 +67,16 @@ function HomePreLaunch() {
                     <h1>How it works</h1>
                     <div className='horizontal three-cols'>
                         <div className='vertical'>
-                            <img src={digitalWallet} 
-                            style={{'height':'12rem', 'width':'auto'}}/>
-                            <p style={{'padding':'0 0 0 0','height':'2rem'}}>
-                                User transacts with Virtual Card
-                            </p>
+                            <img src={digitalWallet}/>
+                            <p>User transacts with Virtual Card</p>
                         </div>
                         <div className='vertical'>
-                            <div>
-                                <img src={cardRouting}
-                                style={{'height':'12rem', 'width':'auto'}}/>
-                            </div>
-                            <p style={{'margin':'0 0 0 0', 'height':'2rem'}}>
-                                Transaction is routed to the most rewarding card
-                            </p>
+                            <img src={cardRouting}/>
+                            <p>Transaction is routed to the most rewarding card</p>
                         </div>
                         <div className='vertical'>
-                            <img src={brokerageRobinhood}
-                            style={{'height':'12rem', 'width':'auto'}}/>
-                            <p style={{'margin':'0 0 0 0','height':'2rem'}}>
-                                Automatically buys ETF of user's choice
-                            </p>
+                            <img src={brokerageRobinhood}/>
+                            <p>Automatically buys ETF of user's choice</p>
                         </div>
                     </div>
                     

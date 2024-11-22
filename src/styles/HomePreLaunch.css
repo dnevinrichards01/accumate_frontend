@@ -398,9 +398,14 @@ p {
     }
 
     .three-cols img {
-        height: 11rem;
+        height: 12rem;
         width: auto;
         max-width: 18rem;
+    }
+
+    .three-cols p {
+        padding:0 0 0 0;
+        height:2rem;
     }
 
 
