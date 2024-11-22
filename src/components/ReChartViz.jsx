@@ -99,13 +99,14 @@ const ReChartViz = () => {
                     <XAxis dataKey="year" domain={[dateNow.getFullYear(),dateNow.getFullYear()+42]} 
                     padding={{ left: 5, right: 0 }}
                     tick={{ fontSize: '.7em'}}
+                    minTickGap={1.5}
                     allowDataOverflow
-                    ticks={Array.from({length: 11}, (_, i) => 4*i + dateNow.getFullYear())} 
+                    ticks={Array.from({length: 6}, (_, i) => 8*i + dateNow.getFullYear())} 
                     >
                     </XAxis>
                     <YAxis tickFormatter={(usd) => `$${Math.floor(usd / 1000)}K`} domain={[0,120000]} 
                         ticks={[0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000]} 
-                        tick={{ fontSize: '.7em', }}
+                        tick={{ fontSize: '.7em'}}
                         padding={{ top: 5, bottom: 5 }} 
                         allowDataOverflow={false}
                         allowDecimals={false}>
@@ -120,7 +121,7 @@ const ReChartViz = () => {
             </ResponsiveContainer>
             <div className='rechart-slider'>
                 <div style={{'display':'flex','justifyContent':'space-between', 
-                    'font-size':'1em'}}>
+                    'font-size':'1em','gap':'10px'}}>
                     <p>How much do you spend each month?</p>
                     <p>${monthlySpend}</p>
                 </div>
