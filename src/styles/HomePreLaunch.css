@@ -55,12 +55,12 @@ html {
 }
 @media only screen and (max-width: 550px) { 
     html { 
-        font-size: .8rem; 
+        font-size: .9rem; 
     }
 }
 @media only screen and (max-width: 500px) { 
     html { 
-        font-size: .6rem; 
+        font-size: .9rem;
     }
 }
 
@@ -209,7 +209,8 @@ p {
     color: white;
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
     width: 100%;
 }
 
@@ -258,11 +259,54 @@ p {
         height: 80vh;
         min-height: 400px;
         max-height: 1200px;
-        width: 80vh;
-        max-width: 100vw;
+        width: 90vh;
+        max-width: 50vw;
         font-size: 1rem;
-        padding: 20px 0;
     }
+    @media only screen and (max-width: 1100) {
+        .rechart {
+            max-width: 90vw;
+        }
+    }
+
+        .rechart-graph {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1rem;
+        } 
+
+        @media only screen and (max-width: 900px) { 
+            .rechart {
+                font-size: .8rem;
+            }
+        }
+        @media only screen and (max-width: 500px) { 
+            .rechart {
+                font-size: .6rem;
+            }
+        }
+
+        .rechart-slider {
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            justify-content: center;
+            width: 75%;
+            margin: 0 0 0 14%;
+        }
+        @media only screen and (max-width: 700px) { 
+            .rechart-slider {
+                font-size: .8rem;
+            }
+        }
+        @media only screen and (max-width: 500px) { 
+            .rechart-slider {
+                font-size: .6rem;
+            }
+        }
 
     .how-it-works {
         gap: 40px;
@@ -295,6 +339,17 @@ p {
     padding-left: 1rem;
     height: 15rem;
     flex-wrap: wrap;
+}
+@media only screen and (max-width: 550px) {
+    .two-cols {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        padding-left: 1rem;
+        height: 15rem;
+        flex-wrap: wrap;
+    }
 }
 
     .two-cols .column {
@@ -368,4 +423,13 @@ p {
     top: 0;
     left: 0;
 }
-
+@media only screen and (max-width: 700px) { 
+    .custom-tooltip {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 500px) { 
+    .custom-tooltip {
+        font-size: .6rem;
+    }
+}

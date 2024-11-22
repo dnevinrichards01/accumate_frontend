@@ -89,9 +89,7 @@ const ReChartViz = () => {
     };
 
     return (
-        <div style={{"width":"100%", "height":"100%",'display':'flex',
-            'flexDirection':'column','justifyContent':'center'
-        }}>
+        <div className='rechart-graph'>
             <ResponsiveContainer width="100%" height="75%">
                 <LineChart data={data} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
                 onMouseMove={handleMouseMove}
@@ -100,14 +98,14 @@ const ReChartViz = () => {
                     <CartesianGrid vertical={false} horizontal={false} />
                     <XAxis dataKey="year" domain={[dateNow.getFullYear(),dateNow.getFullYear()+42]} 
                     padding={{ left: 5, right: 0 }}
-                    tick={{ fontSize: '.7rem'}}
+                    tick={{ fontSize: '.7em'}}
                     allowDataOverflow
                     ticks={Array.from({length: 11}, (_, i) => 4*i + dateNow.getFullYear())} 
                     >
                     </XAxis>
                     <YAxis tickFormatter={(usd) => `$${Math.floor(usd / 1000)}K`} domain={[0,120000]} 
                         ticks={[0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000]} 
-                        tick={{ fontSize: '.7rem', }}
+                        tick={{ fontSize: '.7em', }}
                         padding={{ top: 5, bottom: 5 }} 
                         allowDataOverflow={false}
                         allowDecimals={false}>
@@ -120,9 +118,9 @@ const ReChartViz = () => {
                     dot={false} strokeWidth={3}/>
                 </LineChart>
             </ResponsiveContainer>
-            <div style={{'display':'flex','flexDirection':'column', 'gap':'5px',
-                'justifyContent':'center','width':'75%', 'margin':'0% 0% 0% 14%'}}>
-                <div style={{'display':'flex','justifyContent':'space-between'}}>
+            <div className='rechart-slider'>
+                <div style={{'display':'flex','justifyContent':'space-between', 
+                    'font-size':'1em'}}>
                     <p>How much do you spend each month?</p>
                     <p>${monthlySpend}</p>
                 </div>
