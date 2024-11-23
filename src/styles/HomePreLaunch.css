@@ -412,11 +412,29 @@ p {
         gap: 0;
     }
 
-    .three-cols img {
-        height: 12rem;
+    .three-cols div:has(> img) {
+        height: 13rem;
         width: auto;
         max-width: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .three-cols img {
+        height: 90%;
+        width: auto;
+        max-width: 100%;
+    }
+
+        .three-cols img.large {
+            height: 88%;
+            width: 100%;
+        }
+
+        .three-cols img.small {
+            height: 70%;
+        }
 
     .three-cols p {
         padding:0 0 0 0;
