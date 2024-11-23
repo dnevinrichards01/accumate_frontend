@@ -262,52 +262,41 @@ p {
     }
 
     .rechart {
-        height:1000px;
+        height: calc(80 * var(--vh));
         width:100%;
         max-width: 1000px;
+        max-height: 1000px;
         font-size: 1rem;
         padding: 1rem;
+        padding-bottom: 0;
+        margin-bottom: -1rem;
     }
     @media only screen and (max-width: 1700px) and (orientation: landscape) { 
         .rechart {
-            height:80vh;
-            width:80vh;
-            min-height: 400px;
-            min-width: 400px;
-            max-width: 80vh;
-            font-size: 1rem;
-            padding: 1rem;
+            height: calc(100 * var(--vh));
+            width: calc(100 * var(--vh));
+            max-width: 100vh;
+        }
+    }
+    @media only screen and (max-width: 1000px) and (orientation: landscape) { 
+        .rechart {
+            height: calc(80 * var(--vh));
+            width: calc(100 * var(--vh));
+            max-width: 100vh;
         }
     }
     @media only screen and (max-width: 900px) and (orientation: landscape) { 
         .rechart {
-            height:80vh;
-            width:80vh;
-            min-height: 400px;
-            min-width: 400px;
-            max-width: 80vh;
-            font-size: 1rem;
-            padding: 1rem;
-        }
-    }
-    @media only screen and (max-width: 900px) and (orientation: landscape) { 
-        .rechart {
-            height:80vh;
-            width:100vw;
-            min-height: 0;
-            min-width: 0;
-            max-width:85vh;
-            font-size: .9rem;
+            height: calc(70 * var(--vh));
+            width: calc(105 * var(--vh));
+            max-width: 100vh;
         }
     }
     @media only screen and (max-width: 500px) { 
         .rechart {
-            height:80vh;
-            width:100vw;
-            min-height: 0;
-            min-width: 0;
-            max-width:85vh;
-            font-size: .7rem;
+            height: calc(70 * var(--vh));
+            width: calc(110 * var(--vh));
+            max-width: 100vh;
         }
     }
 

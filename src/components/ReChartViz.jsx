@@ -119,7 +119,7 @@ const ReChartViz = () => {
                     </YAxis>
                     <Tooltip content={<CustomTooltip/>} position={{ x: 75, y: 10 }}/>
                     
-                    <Line type="monotone" dataKey="exponential" name="With Accumate" stroke= {`${primaryColor}`}
+                    <Line type="monotone" dataKey="exponential" name="With Accumate" stroke={primaryColor}
                     dot={false} strokeWidth={3}/>
                     <Line type="monotone" dataKey="constant" name="Without Accumate" stroke="#ffffff"
                     dot={false} strokeWidth={3}/>
