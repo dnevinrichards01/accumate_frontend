@@ -12,6 +12,8 @@ import brokerageRobinhood from "../assets/brokerage-robinhood.png"
 
 function HomePreLaunch() {
 
+    
+
     return (
         <div className='page-container'>
             <header>

@@ -3,6 +3,13 @@
 *::after {
 	box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #f67ed2; /* rgb(139, 74, 139) */
+    --secondary-color: rgb(218, 109, 185); /* rgb(110, 58, 110) */
+    
+}
+
  
 * {
 	margin: 0;
@@ -166,7 +173,7 @@ p {
         height: 100%;
         width: 12ch;
         font-size: 1rem;
-        background-color: rgb(139, 74, 139);
+        background-color: var(--primary-color); 
         color: white;
         border: none;
         border-radius: 4px;
@@ -174,7 +181,7 @@ p {
         transition: background-color 0.2s ease-in-out;
     }
     .menu-button:hover {
-        background-color: rgb(110, 58, 110);
+        background-color: var(--secondary-color);
     }
 
 
@@ -215,7 +222,7 @@ p {
 }
 
     .content-row h1 {
-        color:rgb(139, 74, 139);
+        color: var(--primary-color);
         width: 100%;
         align-self: left;
     }
@@ -254,17 +261,36 @@ p {
         align-items: left;
     }
 
-
     .rechart {
-        height:80vh;
-        width:80vh;
-        min-height: 400px;
-        min-width: 400px;
-        max-width: 80vh;
+        height:1000px;
+        width:100%;
+        max-width: 1000px;
         font-size: 1rem;
         padding: 1rem;
     }
-    @media only screen and (max-width: 900px)  { 
+    @media only screen and (max-width: 1700px) and (orientation: landscape) { 
+        .rechart {
+            height:80vh;
+            width:80vh;
+            min-height: 400px;
+            min-width: 400px;
+            max-width: 80vh;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+    }
+    @media only screen and (max-width: 900px) and (orientation: landscape) { 
+        .rechart {
+            height:80vh;
+            width:80vh;
+            min-height: 400px;
+            min-width: 400px;
+            max-width: 80vh;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+    }
+    @media only screen and (max-width: 900px) and (orientation: landscape) { 
         .rechart {
             height:80vh;
             width:100vw;
@@ -413,7 +439,7 @@ p {
 .form-button {
     width: 95%;
     height: auto;
-    background-color: rgb(139, 74, 139);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     border: none;
@@ -423,7 +449,7 @@ p {
   }
   
   .form-button:hover {
-    background-color: rgb(110, 58, 110);
+    background-color: var(--secondary-color);
   }
 
 

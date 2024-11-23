@@ -14,10 +14,16 @@ import Slider from "./Slider.jsx"
 import { Tooltip as ReactTooltip} from 'react-tooltip';
 import { FiInfo } from "react-icons/fi";
 import "../styles/HomePreLaunch.css"
+import { LineType } from 'lightweight-charts';
 
 
 
 const ReChartViz = () => {
+
+    const rootStyles = getComputedStyle(document.documentElement);
+    const primaryColor = rootStyles.getPropertyValue('--primary-color').trim();
+    const secondaryColor = rootStyles.getPropertyValue('--secondary-color').trim();
+
     const [monthlySpend, setMonthlySpend] = useState(4000);
     const [hoverYear, setHoverYear] = useState(null);
 
@@ -53,7 +59,7 @@ const ReChartViz = () => {
         
             return res;
     }
-    const data = generateLineData(props)
+    let data = generateLineData(props)
 
     const handleChange = (e) => {
         setMonthlySpend(e)
@@ -113,7 +119,7 @@ const ReChartViz = () => {
                     </YAxis>
                     <Tooltip content={<CustomTooltip/>} position={{ x: 75, y: 10 }}/>
                     
-                    <Line type="monotone" dataKey="exponential" name="With Accumate" stroke="rgb(139, 74, 139)"
+                    <Line type="monotone" dataKey="exponential" name="With Accumate" stroke= {`${primaryColor}`}
                     dot={false} strokeWidth={3}/>
                     <Line type="monotone" dataKey="constant" name="Without Accumate" stroke="#ffffff"
                     dot={false} strokeWidth={3}/>
@@ -121,7 +127,7 @@ const ReChartViz = () => {
             </ResponsiveContainer>
             <div className='rechart-slider'>
                 <div style={{'display':'flex','justifyContent':'space-between', 
-                    'font-size':'1em','gap':'10px'}}>
+                    'fontSize':'1em','gap':'10px'}}>
                     <p>How much do you spend each month?</p>
                     <p>${monthlySpend}</p>
                 </div>
