@@ -115,11 +115,6 @@ p {
 @media only screen and (max-width: 1000px) { 
     .menu-bar { 
         flex-wrap: wrap;
-        
-    }
-}
-@media only screen and (max-width: 1000px) { 
-    .menu-bar { 
         justify-content: center;
         padding: 1rem .5rem 0 .5rem;
         gap: 2rem;
@@ -141,14 +136,26 @@ p {
     }
 
     .menu-item img {
-        height: 3rem;
+        height: 100%;
         width: auto;
     }
 
     .menu-logo {
-        flex-shrink: 0;
+        height: 3rem;
+        flex-shrink: 1;
     }
-
+    @media only screen and (max-width: 400px) { 
+        .menu-item { 
+            margin: 0 0;
+            height: 2.1rem;
+        }
+    }
+    @media only screen and (max-width: 320px) { 
+        .menu-item { 
+            margin: 0 0;
+            height: 1.65rem;
+        }
+    }
     
     .menu-title {
         flex-shrink: 0;
@@ -162,16 +169,28 @@ p {
     
 
     .menu-waitlist-div {
-        flex-shrink: 0;
+        flex-shrink: 1;
         height: 2.5rem;
         width: 17ch;
         margin-bottom: .5rem;
         margin-top: 0;
     }
+    @media only screen and (max-width: 400px) { 
+        .menu-waitlist-div { 
+            margin: 0 0;
+            font-size: .7rem;
+        }
+    }
+    @media only screen and (max-width: 320px) { 
+        .menu-waitlist-div { 
+            margin: 0 0;
+            font-size: .55rem;
+        }
+    }
 
     .menu-button {
         height: 100%;
-        width: 12ch;
+        width: 100%;
         font-size: 1rem;
         background-color: var(--primary-color); 
         color: white;
@@ -210,7 +229,17 @@ p {
         justify-content: center;
     }
 }
-/* 350px; */
+@media only screen and (max-width: 400px) { 
+    .menu-title-shifted { 
+        font-size: .7rem;
+    }
+}
+@media only screen and (max-width: 320px) { 
+    .menu-title-shifted { 
+        size: .55rem;
+    }
+}
+
 .content-row{
     background-color: black;
     color: white;
@@ -262,8 +291,8 @@ p {
     }
 
     .rechart {
-        height: calc(80 * var(--vh));
-        width:100%;
+        height: calc(100 * var(--vh));
+        width:100vw;
         max-width: 1000px;
         max-height: 1000px;
         font-size: 1rem;
@@ -272,11 +301,11 @@ p {
     }
     @media only screen and (max-width: 1700px) and (orientation: landscape) { 
         .rechart {
-            height: calc(100 * var(--vh));
-            width: calc(100 * var(--vh));
+            height: calc(90 * var(--vh));
+            width: calc(110 * var(--vh));
             max-width: 100vw;
         }
-    }
+    }/*
     @media only screen and (max-width: 1000px) and (orientation: landscape) { 
         .rechart {
             height: calc(80 * var(--vh));
@@ -300,11 +329,11 @@ p {
     }
     @media only screen and (max-width: 500px) and (orientation: vertical) { 
         .rechart {
-            height: calc(85 * var(--vh));
+            height: calc(100 * var(--vh));
             width: calc(110 * var(--vh));
             max-width: 100vw;
         }
-    }
+    }*/
 
         .rechart-slider {
             display: flex;

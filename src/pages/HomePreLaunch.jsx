@@ -13,10 +13,16 @@ import brokerageRobinhood from "../assets/brokerage-robinhood.png"
 function HomePreLaunch() {
 
     useEffect(() => {
+        let oldvh = 0;
+        let oldvw = 0;
         function setViewportHeight() {
             const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-            console.log(vh)
+            const vw = window.innerWidth * 0.01;
+            if (oldvh !== vh && oldvw !== vw) {
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+            oldvh = vh;
+            oldvw = vw;
         }
         
         // Call the function on load and resize
