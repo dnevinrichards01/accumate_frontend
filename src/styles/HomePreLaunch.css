@@ -71,14 +71,19 @@ html {
     }
 }
 
-@media screen and (max-width: 450px) { 
+@media screen and (max-width: 500) { 
     /* anything this small can't scroll to the sides, 
     content outside of the viewport is hidden*/
     html, body {
         overflow-x: hidden;
     }
 }
-
+@media (pointer: coarse) { 
+    /* if browser supports this, applies to touch screens*/
+    html, body {
+        overflow-x: hidden;
+    }
+}
 
 .page-container {
     max-width: 1500px;
@@ -153,7 +158,7 @@ p {
     @media only screen and (max-width: 320px) { 
         .menu-item { 
             margin: 0 0;
-            height: 1.65rem;
+            height: 1.85rem;
         }
     }
     
@@ -169,7 +174,7 @@ p {
     
 
     .menu-waitlist-div {
-        flex-shrink: 1;
+        flex-shrink: 0;
         height: 2.5rem;
         width: 17ch;
         margin-bottom: .5rem;
@@ -196,6 +201,7 @@ p {
         color: white;
         border: none;
         border-radius: 4px;
+        padding: .3rem 0;
         cursor: pointer;
         transition: background-color 0.2s ease-in-out;
     }
@@ -305,35 +311,7 @@ p {
             width: calc(110 * var(--vh));
             max-width: 100vw;
         }
-    }/*
-    @media only screen and (max-width: 1000px) and (orientation: landscape) { 
-        .rechart {
-            height: calc(80 * var(--vh));
-            width: calc(100 * var(--vh));
-            max-width: 100vw;
-        }
     }
-    @media only screen and (max-width: 900px) and (orientation: landscape) { 
-        .rechart {
-            height: calc(70 * var(--vh));
-            width: calc(105 * var(--vh));
-            max-width: 100vw;
-        }
-    }
-    @media only screen and (max-width: 500px) and (orientation: landscape) { 
-        .rechart {
-            height: calc(70 * var(--vh));
-            width: calc(110 * var(--vh));
-            max-width: 100vw;
-        }
-    }
-    @media only screen and (max-width: 500px) and (orientation: vertical) { 
-        .rechart {
-            height: calc(100 * var(--vh));
-            width: calc(110 * var(--vh));
-            max-width: 100vw;
-        }
-    }*/
 
         .rechart-slider {
             display: flex;
