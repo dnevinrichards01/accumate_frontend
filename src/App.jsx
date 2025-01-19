@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import HomePreLaunch from "./pages/HomePreLaunch"
 import HomeTest from "./pages/HomeTest"
+import ResetPassword from './pages/ResetPassword';
+import ResetPasswordSuccess from "./pages/ResetPasswordSuccess"
 
 function Logout() {
   localStorage.clear()
@@ -23,6 +25,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<HomePreLaunch />} />
+        <Route path="/resetpassword/:resetToken/" element={<ResetPassword />} />
+        <Route path="/resetpasswordsuccess/" exact element={<ResetPasswordSuccess />} />
         {/*<Route path="/hometest/" exact element={<HomeTest />} />
          <Route
           path="/"
