@@ -522,3 +522,15 @@ p {
         font-size: .9rem;
     }
 }
+
+
+/*Center EmailForm inside the waitlist section*/
+#waitlist > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#waitlist > div > * {
+  max-width: 500px;
+  width: 100%;
+}
